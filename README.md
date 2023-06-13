@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# GitHub OAuth Login and Trending Repositories
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React application that allows users to log in with their GitHub accounts using OAuth and displays trending repositories. Users can filter repositories by date range, language, etc., and view detailed information about each repository.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- GitHub OAuth Login: Users can log in to the app using their GitHub accounts using OAuth.
+- Trending Repositories: The app fetches and displays trending repositories based on certain criteria like creation date, stars, etc.
+- Filtering Options: Users can filter repositories by date range, language, and other relevant criteria.
+- Repository Details: Users can view detailed information about each repository, including the name, author, languages, stars, forks, etc.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React: JavaScript library for building user interfaces.
+- Redux: State management library for managing the application's state.
+- React Router: Library for handling routing within the React app.
+- Redux Thunk: Middleware for asynchronous actions in Redux.
+- Axios: Promise-based HTTP client for making API requests.
+- Bootstrap: CSS framework for styling the application.
+- GitHub OAuth: OAuth authentication mechanism provided by GitHub.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Prerequisites
 
-### `npm test`
+- Node.js: Make sure you have Node.js installed on your machine.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+1. Clone the repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```shell
+   git clone https://github.com/Amitdubey0007/github-oauth-app.git
+   
+ 2. Install the dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```shell
+cd your-repo
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  3. Configure GitHub OAuth:
 
-### `npm run eject`
+Create a new OAuth App on GitHub. Follow the instructions here to create the app.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Obtain the Client ID and Client Secret provided by GitHub.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Create a .env file in the root of your project and add the following environment variables:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+REACT_APP_GITHUB_CLIENT_ID=your-client-id
+REACT_APP_GITHUB_CLIENT_SECRET=your-client-secret
+REACT_APP_REDIRECT_URI=http://localhost:3000/callback
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   4. Start the development server:
 
-## Learn More
+  ```shell
+  npm start
+  
+    5. Open your browser and navigate to http://localhost:3000 to access the app.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Folder Structure
+The project structure is organized as follows:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+/src: Contains the main source code of the React app.
+/components: Contains reusable React components used throughout the app.
+/redux: Contains Redux-related files such as actions, reducers, and the store configuration.
+/pages: Contains the main pages of the app, including login, repositories, repository details, etc.
+/utils: Contains utility functions and helper methods.
+/services: Contains service modules for handling API requests and authentication.
+/styles: Contains CSS or SCSS files for styling the app.
+/assets: Contains static assets like images or icons used in the app.
